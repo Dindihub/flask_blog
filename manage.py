@@ -1,7 +1,7 @@
 from app import app
 from flask_script import Manager,Server
 
-#import creat_app function from __init__.py
+#import create_app function from __init__.py
 from app import create_app
 
 #create an instance of app
