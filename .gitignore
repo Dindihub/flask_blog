@@ -21,6 +21,11 @@ docs/_build/
 .vscode
 virtual/
 lib/
+.virtual/
+./virtual/
+virtual
+*__pycache__
+
 # Coverage reports
 htmlcov/
 .coverage

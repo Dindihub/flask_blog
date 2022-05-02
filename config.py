@@ -2,8 +2,11 @@ import os
 
 class Config:
 
-    MOVIE_API_BASE_URL ='https://newsapi.org/v2/everything?{}?api_key={}'
-    MOVIE_API_KEY = os.environ.get('NEWS_API_KEY')
+    ARTICLES_API_URL ='https://newsapi.org/v2/top-headlines?'
+    # SOURCE_API_URL ='https://newsapi.org/v2/top-headlines/sources?'
+    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+    
+
     
 
 
