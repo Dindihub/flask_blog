@@ -8,7 +8,7 @@ def configure_request(app):
     global apiKey,base_url,article_url
     apiKey=app.config['NEWS_API_KEY']
     base_url='https://newsapi.org/v2/sources?language=en&category={}&apiKey=0065fd958ede4c5b81b68d0fef3f8baa'                
-    article_url='https://newsapi.org/v2/top-headlines?category={}&language=en&apiKey=0065fd958ede4c5b81b68d0fef3f8baa'
+    article_url='https://newsapi.org/v2/{}&language=en&apiKey=0065fd958ede4c5b81b68d0fef3f8baa'
 
 def get_source(category):
     '''
@@ -42,11 +42,15 @@ def process_results(source_list):
 
 
 
-def get_articles():
-    
-    get_articles_url= article_url.format('business')
+def get_articles(source=None):
+    final_url=  None
+    if source == None:
+        final_url= article_url.format('top-headlines?category=business')
+    else: 
+        final_url= article_url.format(f'top-headlines?sources={source}')
 
-    with urllib.request.urlopen(get_articles_url) as url:
+
+    with urllib.request.urlopen(final_url) as url:
         get_articles_data = url.read()
         get_articles_response = json.loads(get_articles_data)
         article_results = None
