@@ -5,7 +5,7 @@
 ## Description
 KELELE NEWS is a web application that displays a list of various news sources.Allows users to choose a News source,read articles from the source and get a brief of headlining news content from around the world. 
 
-You can view the site at:[Heroku]()
+You can view the site at:[Heroku](https://kelele-news.herokuapp.com/)
 
 ## User Stories
 As a user I would like to:
