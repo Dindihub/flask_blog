@@ -7,8 +7,8 @@ base_url=None
 def configure_request(app):
     global apiKey,base_url,article_url
     apiKey=app.config['NEWS_API_KEY']
-    base_url='https://newsapi.org/v2/sources?language=en&category={}&apiKey=0065fd958ede4c5b81b68d0fef3f8baa'                
-    article_url='https://newsapi.org/v2/{}&language=en&apiKey=0065fd958ede4c5b81b68d0fef3f8baa'
+    base_url='https://newsapi.org/v2/sources?language=en&category={}&apiKey=083f8d649be640e99107f19b97960e06'                
+    article_url='https://newsapi.org/v2/{}&language=en&apiKey=083f8d649be640e99107f19b97960e06'
 
 def get_source(category):
     '''
